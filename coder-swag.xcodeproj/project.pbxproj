@@ -13,6 +13,8 @@
 		07D767971F46F57600E21A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D767961F46F57600E21A44 /* Assets.xcassets */; };
 		07D7679A1F46F57600E21A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D767981F46F57600E21A44 /* LaunchScreen.storyboard */; };
 		07D767A61F46FBCF00E21A44 /* Catogory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D767A51F46FBCF00E21A44 /* Catogory.swift */; };
+		07D767A81F46FD2600E21A44 /* CatogoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D767A71F46FD2600E21A44 /* CatogoryCell.swift */; };
+		07D767AB1F46FE8A00E21A44 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D767AA1F46FE8A00E21A44 /* DataServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		07D767991F46F57600E21A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07D7679B1F46F57600E21A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07D767A51F46FBCF00E21A44 /* Catogory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catogory.swift; sourceTree = "<group>"; };
+		07D767A71F46FD2600E21A44 /* CatogoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatogoryCell.swift; sourceTree = "<group>"; };
+		07D767AA1F46FE8A00E21A44 /* DataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				07D767931F46F57600E21A44 /* Main.storyboard */,
+				07D767A91F46FE7A00E21A44 /* Services */,
 				07D767A21F46FBA000E21A44 /* Model */,
 				07D767A41F46FBB300E21A44 /* View */,
 				07D767A31F46FBA900E21A44 /* Controller */,
@@ -95,8 +100,17 @@
 		07D767A41F46FBB300E21A44 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07D767A71F46FD2600E21A44 /* CatogoryCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		07D767A91F46FE7A00E21A44 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07D767AA1F46FE8A00E21A44 /* DataServices.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +185,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D767AB1F46FE8A00E21A44 /* DataServices.swift in Sources */,
 				07D767921F46F57600E21A44 /* MainViewController.swift in Sources */,
+				07D767A81F46FD2600E21A44 /* CatogoryCell.swift in Sources */,
 				07D767901F46F57600E21A44 /* AppDelegate.swift in Sources */,
 				07D767A61F46FBCF00E21A44 /* Catogory.swift in Sources */,
 			);

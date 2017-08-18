@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController  {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     
     
-    var catogries = [Catogory]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +20,32 @@ class MainViewController: UIViewController  {
     }
 
 
-// 
-//    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-//        
-//        
-//        return 5
-//    }
+ 
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return DataServices.instance.loadCatogories().count
+    }
     
  
     
 
-//    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-//        
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as
-//        
-//        
-//        return
-//        
-//    }
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? CatogoryCell {
+            
+            
+            let catogory = DataServices.instance.loadCatogories()[indexPath.row]
+            
+            cell.updateCatogoryCellView(for: catogory)
+            
+            return cell
+            
+        }else{
+            
+            return CatogoryCell()
+        }
+        
+    }
 
 }
 
